@@ -1,0 +1,58 @@
+@import './variables'
+@import './helpers'
+@import './mixins'
+
+body, .container
+  min-width: 1201px
+
+.page-content
+  .example-display
+    padding-top: 88px
+    .nav
+      font-size: 0
+      border: 1px solid $color-grey
+      .nav-list
+        width: 100%
+        margin-bottom: 0
+        .nav-item
+          inline-block()
+          width: percentage(1 / 6)
+          height: 60px
+          line-height: 60px
+          .nav-link
+            display: block
+            padding: 0
+            font-size: 20px
+            color: $color-black
+          &:hover
+            border-bottom: 2px solid blue
+            a
+              color: blue
+    .example-content
+      border: 1px solid $color-grey
+      .examples
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+        padding: 14px 60px 60px
+        .example
+          flex: 0 0 300px
+          width: 300px
+          margin-top: 60px
+          .name
+            width: 90px
+            height: 30px
+            line-height: 30px
+            margin: 20px auto 0
+            font-size: 24px
+            color: $color-black
+      /* pagination nav */
+      .example-nav
+        width: 360px
+        margin: 0 auto
+        .pagination
+          width: 100%
+          justify-content: space-between
+          li > a, li > span
+            padding: 6px 12px
+            border: 1px solid $color-grey

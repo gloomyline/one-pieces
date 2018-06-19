@@ -1,0 +1,102 @@
+@import './variables'
+@import './mixins'
+@import './helpers'
+
+body, .container
+  /* add 1 pixel to let media query in ms range */
+  min-width: 1201px !important
+
+.page-content
+  #real-time-news
+    height: 70px
+    border-bottom: 1px solid #e5e5e5
+    overflow: hidden
+    .title
+      inline-block()
+      line-height: 70px
+      font-size: 24px
+      font-weight: bold
+    .marquee
+      inline-block()
+      width: 80%
+      font-size: 0
+      white-space: nowrap
+      overflow: hidden
+      .begin, .end
+        margin-right: 10px
+        line-height: 70px
+        font-size: 18px
+        color: $color-black
+    .more
+      inline-block()
+      margin-left: 10px
+      line-height: 70px
+      a
+        font-size: 12px
+        color: #666
+        text-decoration: none
+  .detail-list
+    .scheme-introduction
+      width: 80%
+      margin: 0 auto
+      padding-bottom: 136px
+      font-size: 0
+      .img-wrap
+        inline-block()
+        padding: 124px 60px 0 24px
+      .desc
+        inline-block()
+        padding-top: 216px
+        .title
+          width: 120px
+          height: 50px
+          line-height: 50px
+          font-size: 18px
+          font-weight: 600
+          color: #fdfdfe
+          background-color: $color-green
+        .text
+          width: 510px
+          height: 100px
+          margin-top: 32px
+          font-size: 18px
+          color: $color-black
+    .scheme-function
+      .function-lists
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+        width: 740px
+        margin: 0 auto
+        padding-top: 70px
+        font-size: 0
+        .function-list
+          flex: 0 0 350px
+          width: 350px
+          height: 280px
+          margin-top: 40px
+          padding-top: 40px
+          border: 1px solid $color-grey
+          box-sizing: border-box
+          font-size: 18px
+          color: $color-black
+          &:last-child
+            padding-top: 10px
+          .title
+            font-size: 24px
+            color: $color-green
+            font-weight: bold
+          ul li
+            line-height: 48px
+    .process-structure
+      margin-top: 56px
+      margin-bottom: 44px
+      .title
+        width: 370px
+        height: 80px
+        line-height: 80px
+        margin: 0 auto
+        margin-bottom: 70px
+        font-size: 24px
+        color: white
+        background-color: $color-green

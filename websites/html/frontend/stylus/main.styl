@@ -1,0 +1,316 @@
+ /**
+ * @Author: AlanWang
+ * @Date:   2018-03-16T17:19:56+08:00
+ * @Last modified by:   AlanWang
+ * @Last modified time: 2018-03-16T17:20:35+08:00
+ */
+@import './variables'
+@import './mixins'
+@import './helpers'
+
+body, .container
+  /* add 1 pixel to let media query in ms range */
+  min-width: 1201px !important
+
+.banner-wrap
+  width: 100%
+  #banner
+    width: 100%
+    margin-top: 158px
+
+.page-content
+  width: 100%
+  #real-time-news
+    height: 70px
+    border-bottom: 1px solid #e5e5e5
+    overflow: hidden
+    .title
+      inline-block()
+      line-height: 70px
+      font-size: 24px
+      font-weight: bold
+    .marquee
+      inline-block()
+      width: 80%
+      font-size: 0
+      white-space: nowrap
+      overflow: hidden
+      .begin, .end
+        margin-right: 10px
+        line-height: 70px
+        font-size: 18px
+        color: $color-black
+    .more
+      inline-block()
+      margin-left: 10px
+      line-height: 70px
+      a
+        font-size: 12px
+        color: #666
+        text-decoration: none
+  /* component details list */
+  .detail-list
+    margin-top: 24px
+    /* detail header */
+    .detail-header
+      .primary-title
+        width: 240px
+        margin: 0 auto
+        font-size 30px
+        font-weight 600
+        color #282828
+        border-bottom 3px solid #a0a0a0
+      .secondary-title
+        margin-top 12px
+        color #a0a0a0
+        font-size 24px
+    /* component news */
+    .news
+      border-bottom: 1px solid $color-grey
+      .news-lists
+        display: flex
+        flex-flow: row wrap
+        .news-list
+          flex: 0 0 50%
+          height: 240px
+          padding: 20px
+          h5[class$="-title"]
+            position: relative
+            padding-left: 16px
+            font-size: 20px
+            color: $color-green
+            border-left: 4px solid $color-green
+            .more
+              absolute: top right
+              padding: 4px
+              font-size: 20px
+              color: $color-green
+              &:hover
+                color: $color-green
+          div[class$="-list"], ul[class$="-list"]
+            margin-top: 12px
+            border-top: 1px solid $color-green
+            padding: 20px 0
+            line-height: 2.4em
+            font-size: 16px
+            li
+              position: relative
+              a[class$="-link"], ../ a[class$="-link"]
+                color: $color-black
+                &:hover
+                  color: $color-green
+                  text-decoration: none
+          &.latest-contract, &.media-infos
+            position: relative
+            &:after
+              display: block
+              content: ' '
+              absolute: right top 36px
+              width: 1px
+              height: 120px
+              border-right: 1px solid $color-grey
+          &.company-dynamic-state
+            .state-list
+              font-size: 0
+              .state-link
+                display: inline-block
+                width: 33.3%
+                .name
+                  margin-top: 16px
+                  font-size: 18px
+                  color: $color-black
+                  &:hover
+                    color: $color-green
+                    text-decoration: none
+    .core-product
+      margin-top: 24px
+      .product-list
+        margin-top: 100px
+        font-size: 0
+        .product-item
+          position: relative
+          display: inline-block
+          width: 210px
+          height: 340px
+          margin-right: 15px
+          &:last-child
+            margin: 0
+          .mask
+            absolute: top right
+            width: 100%
+            height: 100%
+            overflow: hidden
+            .bg
+              width: 100%
+              height: 100%
+            .content
+              absolute: top 100px left
+              right: 0
+              bottom: 0
+              -transition: all .4s cubic-bezier(0.4, 0, 0.2, 1)
+              .item-icon-panel
+                position: relative
+                display: inline-block
+                width: 80px
+                .item-icon
+                  opacity: 1
+                .item-icon-hover
+                  absolute: left top
+                  opacity: 0
+              .item-line-panel
+                margin-top: 20px
+                transition: all .4s cubic-bezier(0.4, 0, 0.2, 1)
+                .icon-line
+                  display: inline-block
+                  width: 60px
+                  height: 4px
+                  border-radius: 1px 1px
+                  background-color: white
+                  transition: all .4s cubic-bezier(0.4, 0, 0.2, 1)
+              .item-title
+                height: 40px
+                line-height: 40px
+                margin-top: 30px
+                font-size: 24px
+                color: white
+                transition: all .4s cubic-bezier(0.4, 0, 0.2, 1)
+              .item-desc
+                height: 56px;
+                margin-top: 20px;
+                padding: 0px 16px;
+                line-height: 20px;
+                font-size: 14px;
+                color: #fff;
+                opacity: 0
+                transition: all .4s cubic-bezier(0.4, 0, 0.2, 1)
+          pros = 'consumer-finance' 'block-chain' 'cash-loan' offline 'internet-banking'
+          for i in pros
+            &.{unquote(i)}:hover
+              .bg
+                background-color: $color-green
+                opacity: .5
+              .content
+                top: 8%
+                .item-icon-panel
+                  .item-icon
+                    opacity: 0
+                  .item-icon-hover
+                    opacity: 1
+                .item-line-panel
+                  margin-top: 0
+                  .icon-line
+                    opacity: 0
+                .item-title
+                  margin-top: 0
+                .item-desc
+                  margin-top: 10px
+                  opacity: 1
+    .mobile-terminal
+      margin-top: 80px
+      .top
+        position: relative
+        .bg
+          width: 100%
+          z-index: -1
+        .detail-header
+          absolute: left top 32px
+          width: 100%
+          .primary-title, .secondary-title
+            color: white
+            border-color: white
+        .mobile-links-wrap
+          absolute: left bottom
+          width: 100%
+          height: 180px
+          background-color: rgba(0, 0, 0, .6)
+          .mobile-links
+            width: 80%
+            margin: 0 auto
+            padding-top: 48px
+            font-size: 0
+            .mobile-link
+              inline-block()
+              width: 25%
+              .name
+                margin-top: 24px
+                font-size: 18px
+                color: white
+      .bottom
+        margin-bottom: 40px
+        padding: 60px 0
+        .extra-descs
+          width: 80%
+          margin: 0 auto
+          font-size: 0
+          .extra-desc
+            inline-block()
+            width: 18%
+            margin-right: percentage((1 - unit(@width, '') / 100 * 5) / 4)
+            &:last-child
+              margin-right: 0
+    .our-customer
+      padding-bottom: 64px
+      .desc
+        padding-top: 24px
+      .links-wrap
+        .customer-links
+          margin: 48px auto
+          font-size: 0
+          .customer-link
+            inline-block()
+            &:last-child
+              margin-right: 0
+
+.footer
+  .top
+    position: relative
+    .company-info
+      absolute: left top
+      width: 100%
+      height: 100%
+      font-size: 0
+      .info-list
+        position: absolute
+        left: 50%
+        top: 50%
+        width: 80%
+        height: 188px
+        margin: (-@height / 2) auto 0 (-@width / 2)
+        .info-item
+          inline-block()
+          width: 33.3%
+          .name
+            margin-top: 24px
+            font-size: 18px
+            color: white
+  .bottom
+    padding-top: 48px
+    padding-bottom: 24px
+    color: white
+    background-color: black
+    .infos-wrap
+      display: flex
+      justify-content: space-between
+      width: 72%
+      margin: 0 auto
+      .company-desc
+        margin-right: 48px
+        .list-unstyled
+          line-height: 24px
+          font-size: 14px
+      .wechat, .app
+        inline-block()
+        margin-right: 24px
+        font-size: 0
+        .qr
+          inline-block()
+          margin-right: 24px
+        .desc
+          inline-block()
+          margin-top: 24px
+          line-height: 24px
+          font-size: 14px
+
+    .copyright
+      margin-bottom: 0
+      padding-top: 24px

@@ -1,0 +1,23 @@
+inline-block()
+  display: inline-block
+  vertical-align: top
+
+/* position */
+-pos(type, args)
+  i = 0
+  position: unquote(type)
+  {args[i]}: args[i + 1] is a 'unit' ? args[i += 1] : 0
+  {args[i += 1]}: args[i + 1] is a 'unit' ? args[i += 1] : 0
+
+fixed()
+  -pos('fixed', arguments)
+
+absolute()
+  -pos('absolute', arguments)
+
+/* browser suffixer */
+-transition()
+  transition: arguments
+  -webkit-transition: arguments
+  -moz-transition: arguments
+  -o-transition: arguments

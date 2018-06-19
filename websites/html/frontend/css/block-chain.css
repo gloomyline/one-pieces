@@ -1,0 +1,200 @@
+.clearfix:after,
+.clearfix:before {
+  content: '';
+  display: table;
+}
+.clearfix {
+  clear: both;
+}
+.definition {
+  min-width: 1286px;
+  text-align: center;
+  font-family: '黑体';
+}
+.definition .pro-title {
+  font-size: 22px;
+  font-weight: bold;
+  color: #194d9e;
+}
+.definition .tendency {
+  padding-top: 122px;
+}
+.definition .tendency .desc {
+  width: 1006px;
+  margin: 0 auto;
+  padding-top: 35px;
+  color: #333;
+  font-size: 16px;
+}
+.definition .advance {
+  width: 100%;
+  min-width: 1286px;
+  padding: 100px 0;
+  background: url("http://www.gdquansu.com/../images/js-bg.png") no-repeat;
+}
+.definition .advance .box-wrap {
+  width: 1286px;
+  margin: 0 auto;
+  padding-top: 110px;
+  margin-bottom: 61px;
+}
+.definition .advance .box-wrap .box {
+  display: flex;
+  flex-wrap: wrap;
+}
+.definition .advance .box-wrap .box .box-item {
+  width: 20%;
+  text-align: center;
+}
+.definition .advance .box-wrap .box .box-item .ad-img {
+  display: inline-block;
+  height: 50px;
+  vertical-align: middle;
+  margin-bottom: 26px;
+}
+.definition .advance .box-wrap .box .box-item .ad-desc {
+  line-height: 30px;
+  letter-spacing: 1px;
+  text-align: center;
+  font-size: 14px;
+  color: #71afff;
+}
+.definition .advance .box-wrap .box .box-item .ad-desc-d {
+  line-height: 30px;
+  letter-spacing: 1px;
+  text-align: center;
+  font-size: 16px;
+  color: #fff;
+}
+.definition .application {
+  width: 100%;
+  min-width: 1180px;
+  padding: 100px 0;
+}
+.definition .application .app-txt {
+  padding-top: 32px;
+}
+.definition .application .app-box {
+  width: 1200px;
+  margin: 0 auto;
+  padding-top: 31px;
+}
+.definition .application .app-box h3 {
+  font-size: 1.17em;
+  margin-bottom: 0;
+}
+.definition .application .app-box .t1 {
+  text-align: left;
+}
+.definition .application .app-box .app-text {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 13px;
+  text-align: left;
+  font-size: 14px;
+  color: #eee;
+  background-color: rgba(5,58,141,0.85);
+}
+.definition .application .app-box .app-text .app-color {
+  margin-bottom: 0;
+  color: #71afff;
+}
+.definition .application .app-box .app-list-1 {
+  position: relative;
+  float: left;
+  width: 21.6%;
+  text-align: center;
+}
+.definition .application .app-box .app-list-2 {
+  position: relative;
+  float: left;
+  width: 14%;
+  margin-left: 11px;
+}
+.definition .application .app-box .app-list-2 .commu {
+  height: 110px;
+}
+.definition .application .app-box .app-list-2 .charity {
+  height: 185px;
+}
+.definition .application .app-box .app-list-3 {
+  position: relative;
+  float: left;
+  width: 14%;
+  margin-left: 11px;
+}
+.definition .application .app-box .app-list-3 .ip {
+  height: 195px;
+  padding-bottom: 11px;
+}
+.definition .application .app-box .app-list-3 .healthy {
+  height: 110px;
+}
+.definition .application .app-box .app-list-4 {
+  position: relative;
+  float: left;
+  width: 16.916%;
+  margin-left: 11px;
+}
+.definition .application .app-box .app-list-5 {
+  position: relative;
+  float: left;
+  width: 14.75%;
+  margin-left: 11px;
+}
+.definition .application .app-box .app-list-5 .culture {
+  height: 206px;
+  padding-bottom: 11px;
+}
+.definition .application .app-box .app-list-5 .share {
+  height: 99px;
+}
+.definition .application .app-box .app-list-6 {
+  position: relative;
+  float: left;
+  width: 13.89%;
+  margin-left: 11px;
+}
+.definition .application .app-box .app-list-6 .gov {
+  height: 120px;
+  padding-bottom: 11px;
+}
+.definition .application .app-box .app-list-6 .edu {
+  height: 185px;
+}
+.definition .global {
+  width: 1286px;
+  background: url("http://www.gdquansu.com/../images/js-app-bg.png") bottom no-repeat;
+  margin-bottom: 61px;
+}
+.definition .global .js-box {
+  margin: 0 auto;
+}
+.definition .global .js-box .bc-list {
+  float: left;
+  width: 32.4%;
+  text-align: left;
+  margin-bottom: 45px;
+  border-radius: 4px;
+  border: solid 2px rgba(229,229,229,0.8);
+  background-color: rgba(255,255,255,0.8);
+}
+.definition .global .js-box .bc-country {
+  color: #00236d;
+  font-size: 16px;
+}
+.definition .global .js-box .bc-text {
+  color: #333;
+  font-size: 14px;
+}
+.definition .global .js-box .pd14 {
+  padding: 17px 23px 17px 23px;
+}
+.definition .global .js-box .pl13 {
+  padding-left: 13px;
+}
+.definition .global .js-box .pt11 {
+  padding-top: 11px;
+}

@@ -1,0 +1,75 @@
+@import './variable.styl'
+
+@media (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5)
+  .border-1px
+    &::after
+      -webkit-transform scaleY(.7)
+      transform scaleY(.7)
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2)
+  .border-1px
+    &::after
+      -webkit-transform scaleY(.5)
+      transform scaleY(.5)
+
+.clearfix
+  display inline-block
+  &:after
+    display block
+    content "."
+    height 0
+    line-height 0
+    clear both
+    visibility hidden
+
+/* 颜色相关 */
+
+// 文字
+.color-text-blue
+  color $color-text-blue
+
+.color-text-yellow
+  color $color-text-yellow
+
+.color-text-warn
+  color $color-text-warn
+
+.color-text-tip
+  color $color-grey-higher
+
+// 按钮
+.btn-yellow
+  width 300px !important
+  height 40px !important
+  margin 0 auto
+  font-size 16px !important
+  color $color-text-white !important
+  letter-spacing 2px !important
+  border-radius 20px 20px !important
+  border-color $color-yellow !important
+  background-color $color-yellow !important
+  &:active
+    border-color $color-yellow !important
+    background-color $color-yellow !important
+
+/* 覆盖 we-ui 样式 */
+.weui-dialog__btn_primary
+  color $color-text-blue !important
+
+.weui-cell
+  height 55px !important
+
+/* 兼容性处理 */
+// placeholder样式
+::-webkit-input-placeholder { /* WebKit browsers */
+    color $color-text-grey-higher
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color $color-text-grey-higher
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color $color-text-grey-higher
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color $color-text-grey-higher
+}

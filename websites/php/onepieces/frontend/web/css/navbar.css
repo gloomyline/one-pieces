@@ -1,0 +1,133 @@
+#nav-bar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background: #fff;
+  z-index: 999;
+}
+#nav-bar .nav-title {
+  padding: 16px 0;
+  color: #282828;
+}
+#nav-bar .nav-title .title-left {
+  font-size: 0;
+}
+#nav-bar .nav-title .title-left .logo-wrap {
+  display: inline-block;
+  vertical-align: top;
+}
+#nav-bar .nav-title .title-left .left-content {
+  display: inline-block;
+  vertical-align: top;
+  padding-left: 8px;
+  border-left: 1px solid #65cecf;
+}
+#nav-bar .nav-title .title-left .left-content .company-name {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  margin-top: 0;
+  line-height: 1.2;
+}
+#nav-bar .nav-title .title-right {
+  font-size: 0;
+}
+#nav-bar .nav-title .title-right .icon-wrap {
+  display: inline-block;
+  vertical-align: top;
+}
+#nav-bar .nav-title .title-right .right-content {
+  display: inline-block;
+  vertical-align: top;
+  padding-left: 12px;
+  font-size: 16px;
+}
+#nav-bar .nav-title .title-right .right-content .phone-number,
+#nav-bar .nav-title .title-right .right-content .email {
+  margin: 0;
+}
+#nav-bar .nav-wrap {
+  position: relative;
+  width: 100%;
+  height: 70px;
+  background-color: #65cecf;
+}
+#nav-bar .nav-wrap .nav {
+  display: flex;
+}
+#nav-bar .nav-wrap .nav .nav-item {
+  flex: 1;
+  height: 70px;
+  padding-top: 15px;
+  font-size: 16px;
+  cursor:pointer;
+}
+#nav-bar .nav-wrap .nav .nav-item .nav-link {
+  color: #fff;
+}
+#nav-bar .nav-wrap .nav .nav-item .nav-link.active {
+  position: relative;
+}
+#nav-bar .nav-wrap .nav .nav-item .nav-link.active:after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 72px;
+  height: 2px;
+  margin-left: -36px;
+  background: #fff;
+}
+#nav-bar .nav-wrap div[id^='dropdown-list-'] {
+  display: none;
+  width: 100%;
+  position: absolute;
+  top: 70px;
+  left: 0;
+  background-color: rgba(229,245,253,0.7);
+}
+#nav-bar .nav-wrap div[id^='dropdown-list-'] .consumer-finance,
+#nav-bar .nav-wrap div[id^='dropdown-list-'] .block-chain {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+#nav-bar .nav-wrap  div[id^='dropdown-list-'] .consumer-finance .title,
+#nav-bar .nav-wrap  div[id^='dropdown-list-'] .block-chain .title {
+  padding: 15px 0;
+  font-size: 18px;
+  font-weight: bold;
+  color: #757575;
+  cursor: pointer;
+  width: 200px;
+  height: 60px;
+}
+#nav-bar .nav-wrap  div[id^='dropdown-list-'] .consumer-finance li[class$='-item'],
+#nav-bar .nav-wrap  div[id^='dropdown-list-'] .block-chain li[class$='-item'] {
+  width: 200px;
+  height: 60px;
+  padding: 15px 20px;
+  font-size: 18px;
+  font-weight: bold;
+}
+#nav-bar .nav-wrap div[id^='dropdown-list-'] .consumer-finance li[class$='-item'] a,
+#nav-bar .nav-wrap div[id^='dropdown-list-'] .block-chain li[class$='-item'] a {
+  display: block;
+  height: 30px;
+  color: #fff;
+  background-color: #65cecf;
+}
+#nav-bar .nav-wrap div[id^='dropdown-list-'] .consumer-finance li[class$='-item'] a:hover,
+#nav-bar .nav-wrap div[id^='dropdown-list-'] .block-chain li[class$='-item'] a:hover {
+  color: #65cecf;
+  text-decoration: none;
+  background-color: #fff;
+}
+
+#nav-bar .nav-wrap .nav>li>a:hover {
+  background: none;
+}

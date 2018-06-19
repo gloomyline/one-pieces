@@ -1,0 +1,59 @@
+{
+  "loan": [
+    {
+      "name": "auditing",
+      "value": "待审核",
+      "flag": 1
+    },
+    {
+      "name": "audit_failure",
+      "value": "审核失败",
+      "flag": 0
+    },
+    {
+      "name": "reviewing",
+      "value": "待审核",
+      "flag": 1
+    },
+    {
+      "name": "review_failure",
+      "value": "审核失败",
+      "flag": 0
+    },
+    {
+      "name": "review_success",
+      "value": "审核成功",
+      "flag": 1
+    },
+    {
+      "name": "granting",
+      "value": "放款中",
+      "flag": 1
+    },
+    {
+      "name": "repaying",
+      "value": "还款中",
+      "flag": 1
+    },
+    {
+      "name": "finished",
+      "value": "已还完",
+      "flag": 1
+    },
+    {
+      "name": "overdue",
+      "value": "逾期",
+      "flag": 0
+    }
+  ],
+  "repayment": [
+    {
+      "name": "finished",
+      "value": "已完成"
+    },
+    {
+      "name": "repaying",
+      "value": "还款中"
+    }
+  ]
+}

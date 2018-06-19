@@ -1,0 +1,56 @@
+/* filter */
+all-blur($size)
+  filter blur($size)
+  backdrop-filter blur($size)
+
+border-1px($color)
+  position relative
+  &:after
+    display block
+    position absolute
+    width 100%
+    left 0
+    bottom 0
+    border-bottom 1px solid $color
+    content ' '
+
+border-none()
+  &:after
+    display none
+
+bg-img($url)
+  background-image url($url + "@2x.png")
+  @media (-webkit-min-pixel-ratio: 3),(min-pixel-ratio: 3)
+    background-image url($url + "@3x.png")
+
+inline-icon($width, $height)
+  display inline-block
+  vertical-align top
+  width $width
+  height $height
+  background-size $width $height
+  background-repeat no-repeat
+
+/* position */
+-pos(type, args)
+  position: unquote(type)
+  i = 0
+  {args[i]}: args[i+1] is a 'unit' ? args[i+=1] : 0
+  {args[i+=1]}: args[i+1] is a 'unit' ? args[i+=1] : 0
+
+absolute()
+  -pos('absolute', arguments)
+
+fixed()
+  -pos('fixed', arguments)
+
+/* 修改 input 中 placeholder 样式 */
+input-placeholder($color)
+  &::-webkit-input-placeholder /* WebKit browsers */
+    color $color
+  &:-moz-placeholder          /* Mozilla Firefox 4 to 18 */
+    color $color
+  &::-moz-placeholder         /* Mozilla Firefox 19+ */
+    color $color
+  &:-ms-input-placeholder     /* Internet Explorer 10+ */
+    color $color

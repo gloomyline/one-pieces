@@ -1,0 +1,543 @@
+/**
+ * @Author: AlanWang
+ * @Date:   2018-03-16T17:19:56+08:00
+ * @Last modified by:   AlanWang
+ * @Last modified time: 2018-03-16T17:20:35+08:00
+ */
+ul {
+  list-style: none;
+}
+.align-right {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.separator-line {
+  width: 100%;
+  border-bottom: 1px solid #e5e5e5;
+}
+body,
+.container {
+/* add 1 pixel to let media query in ms range */
+  min-width: 1201px !important;
+}
+.banner-wrap {
+  width: 100%;
+}
+.banner-wrap #banner {
+  width: 100%;
+  margin-top: 158px;
+}
+.page-content {
+  width: 100%;
+/* component details list */
+}
+.page-content #real-time-news {
+  height: 70px;
+  border-bottom: 1px solid #e5e5e5;
+  overflow: hidden;
+}
+.page-content #real-time-news .title {
+  display: inline-block;
+  vertical-align: top;
+  line-height: 70px;
+  font-size: 24px;
+  font-weight: bold;
+}
+.page-content #real-time-news .marquee {
+  display: inline-block;
+  vertical-align: top;
+  width: 80%;
+  font-size: 0;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.page-content #real-time-news .marquee .begin,
+.page-content #real-time-news .marquee .end {
+  margin-right: 10px;
+  line-height: 70px;
+  font-size: 18px;
+  color: #282828;
+}
+.page-content #real-time-news .more {
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 10px;
+  line-height: 70px;
+}
+.page-content #real-time-news .more a {
+  font-size: 12px;
+  color: #666;
+  text-decoration: none;
+}
+.page-content .detail-list {
+  margin-top: 24px;
+/* detail header */
+/* component news */
+}
+.page-content .detail-list .detail-header .primary-title {
+  width: 240px;
+  margin: 0 auto;
+  font-size: 30px;
+  font-weight: 600;
+  color: #282828;
+  border-bottom: 3px solid #a0a0a0;
+}
+.page-content .detail-list .detail-header .secondary-title {
+  margin-top: 12px;
+  color: #a0a0a0;
+  font-size: 24px;
+}
+.page-content .detail-list .news {
+  border-bottom: 1px solid #e5e5e5;
+}
+.page-content .detail-list .news .news-lists {
+  display: flex;
+  flex-flow: row wrap;
+}
+.page-content .detail-list .news .news-lists .news-list {
+  flex: 0 0 50%;
+  height: 240px;
+  padding: 20px;
+}
+.page-content .detail-list .news .news-lists .news-list h5[class$="-title"] {
+  position: relative;
+  padding-left: 16px;
+  font-size: 20px;
+  color: #65cecf;
+  border-left: 4px solid #65cecf;
+}
+.page-content .detail-list .news .news-lists .news-list h5[class$="-title"] .more {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 4px;
+  font-size: 20px;
+  color: #65cecf;
+}
+.page-content .detail-list .news .news-lists .news-list h5[class$="-title"] .more:hover {
+  color: #65cecf;
+}
+.page-content .detail-list .news .news-lists .news-list div[class$="-list"],
+.page-content .detail-list .news .news-lists .news-list ul[class$="-list"] {
+  margin-top: 12px;
+  border-top: 1px solid #65cecf;
+  padding: 20px 0;
+  line-height: 2.4em;
+  font-size: 16px;
+}
+.page-content .detail-list .news .news-lists .news-list div[class$="-list"] li,
+.page-content .detail-list .news .news-lists .news-list ul[class$="-list"] li {
+  position: relative;
+}
+.page-content .detail-list .news .news-lists .news-list div[class$="-list"] li a[class$="-link"],
+.page-content .detail-list .news .news-lists .news-list ul[class$="-list"] li a[class$="-link"],
+.page-content .detail-list .news .news-lists .news-list div[class$="-list"] a[class$="-link"],
+.page-content .detail-list .news .news-lists .news-list ul[class$="-list"] a[class$="-link"] {
+  color: #282828;
+}
+.page-content .detail-list .news .news-lists .news-list div[class$="-list"] li a[class$="-link"]:hover,
+.page-content .detail-list .news .news-lists .news-list ul[class$="-list"] li a[class$="-link"]:hover,
+.page-content .detail-list .news .news-lists .news-list div[class$="-list"] a[class$="-link"]:hover,
+.page-content .detail-list .news .news-lists .news-list ul[class$="-list"] a[class$="-link"]:hover {
+  color: #65cecf;
+  text-decoration: none;
+}
+.page-content .detail-list .news .news-lists .news-list.latest-contract,
+.page-content .detail-list .news .news-lists .news-list.media-infos {
+  position: relative;
+}
+.page-content .detail-list .news .news-lists .news-list.latest-contract:after,
+.page-content .detail-list .news .news-lists .news-list.media-infos:after {
+  display: block;
+  content: ' ';
+  position: absolute;
+  right: 0;
+  top: 36px;
+  width: 1px;
+  height: 120px;
+  border-right: 1px solid #e5e5e5;
+}
+.page-content .detail-list .news .news-lists .news-list.company-dynamic-state .state-list {
+  font-size: 0;
+}
+.page-content .detail-list .news .news-lists .news-list.company-dynamic-state .state-list .state-link {
+  display: inline-block;
+  width: 33.3%;
+}
+.page-content .detail-list .news .news-lists .news-list.company-dynamic-state .state-list .state-link .name {
+  margin-top: 16px;
+  font-size: 18px;
+  color: #282828;
+}
+.page-content .detail-list .news .news-lists .news-list.company-dynamic-state .state-list .state-link .name:hover {
+  color: #65cecf;
+  text-decoration: none;
+}
+.page-content .detail-list .core-product {
+  margin-top: 24px;
+}
+.page-content .detail-list .core-product .product-list {
+  margin-top: 100px;
+  font-size: 0;
+}
+.page-content .detail-list .core-product .product-list .product-item {
+  position: relative;
+  display: inline-block;
+  width: 210px;
+  height: 340px;
+  margin-right: 15px;
+}
+.page-content .detail-list .core-product .product-list .product-item:last-child {
+  margin: 0;
+}
+.page-content .detail-list .core-product .product-list .product-item .mask {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.page-content .detail-list .core-product .product-list .product-item .mask .bg {
+  width: 100%;
+  height: 100%;
+}
+.page-content .detail-list .core-product .product-list .product-item .mask .content {
+  position: absolute;
+  top: 100px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  -moz-transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  -o-transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.page-content .detail-list .core-product .product-list .product-item .mask .content .item-icon-panel {
+  position: relative;
+  display: inline-block;
+  width: 80px;
+}
+.page-content .detail-list .core-product .product-list .product-item .mask .content .item-icon-panel .item-icon {
+  opacity: 1;
+}
+.page-content .detail-list .core-product .product-list .product-item .mask .content .item-icon-panel .item-icon-hover {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}
+.page-content .detail-list .core-product .product-list .product-item .mask .content .item-line-panel {
+  margin-top: 20px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.page-content .detail-list .core-product .product-list .product-item .mask .content .item-line-panel .icon-line {
+  display: inline-block;
+  width: 60px;
+  height: 4px;
+  border-radius: 1px 1px;
+  background-color: #fff;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.page-content .detail-list .core-product .product-list .product-item .mask .content .item-title {
+  height: 40px;
+  line-height: 40px;
+  margin-top: 30px;
+  font-size: 24px;
+  color: #fff;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.page-content .detail-list .core-product .product-list .product-item .mask .content .item-desc {
+  height: 56px;
+  margin-top: 20px;
+  padding: 0px 16px;
+  line-height: 20px;
+  font-size: 14px;
+  color: #fff;
+  opacity: 0;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.page-content .detail-list .core-product .product-list .product-item.consumer-finance:hover .bg {
+  background-color: #65cecf;
+  opacity: 0.5;
+}
+.page-content .detail-list .core-product .product-list .product-item.consumer-finance:hover .content {
+  top: 8%;
+}
+.page-content .detail-list .core-product .product-list .product-item.consumer-finance:hover .content .item-icon-panel .item-icon {
+  opacity: 0;
+}
+.page-content .detail-list .core-product .product-list .product-item.consumer-finance:hover .content .item-icon-panel .item-icon-hover {
+  opacity: 1;
+}
+.page-content .detail-list .core-product .product-list .product-item.consumer-finance:hover .content .item-line-panel {
+  margin-top: 0;
+}
+.page-content .detail-list .core-product .product-list .product-item.consumer-finance:hover .content .item-line-panel .icon-line {
+  opacity: 0;
+}
+.page-content .detail-list .core-product .product-list .product-item.consumer-finance:hover .content .item-title {
+  margin-top: 0;
+}
+.page-content .detail-list .core-product .product-list .product-item.consumer-finance:hover .content .item-desc {
+  margin-top: 10px;
+  opacity: 1;
+}
+.page-content .detail-list .core-product .product-list .product-item.block-chain:hover .bg {
+  background-color: #65cecf;
+  opacity: 0.5;
+}
+.page-content .detail-list .core-product .product-list .product-item.block-chain:hover .content {
+  top: 8%;
+}
+.page-content .detail-list .core-product .product-list .product-item.block-chain:hover .content .item-icon-panel .item-icon {
+  opacity: 0;
+}
+.page-content .detail-list .core-product .product-list .product-item.block-chain:hover .content .item-icon-panel .item-icon-hover {
+  opacity: 1;
+}
+.page-content .detail-list .core-product .product-list .product-item.block-chain:hover .content .item-line-panel {
+  margin-top: 0;
+}
+.page-content .detail-list .core-product .product-list .product-item.block-chain:hover .content .item-line-panel .icon-line {
+  opacity: 0;
+}
+.page-content .detail-list .core-product .product-list .product-item.block-chain:hover .content .item-title {
+  margin-top: 0;
+}
+.page-content .detail-list .core-product .product-list .product-item.block-chain:hover .content .item-desc {
+  margin-top: 10px;
+  opacity: 1;
+}
+.page-content .detail-list .core-product .product-list .product-item.cash-loan:hover .bg {
+  background-color: #65cecf;
+  opacity: 0.5;
+}
+.page-content .detail-list .core-product .product-list .product-item.cash-loan:hover .content {
+  top: 8%;
+}
+.page-content .detail-list .core-product .product-list .product-item.cash-loan:hover .content .item-icon-panel .item-icon {
+  opacity: 0;
+}
+.page-content .detail-list .core-product .product-list .product-item.cash-loan:hover .content .item-icon-panel .item-icon-hover {
+  opacity: 1;
+}
+.page-content .detail-list .core-product .product-list .product-item.cash-loan:hover .content .item-line-panel {
+  margin-top: 0;
+}
+.page-content .detail-list .core-product .product-list .product-item.cash-loan:hover .content .item-line-panel .icon-line {
+  opacity: 0;
+}
+.page-content .detail-list .core-product .product-list .product-item.cash-loan:hover .content .item-title {
+  margin-top: 0;
+}
+.page-content .detail-list .core-product .product-list .product-item.cash-loan:hover .content .item-desc {
+  margin-top: 10px;
+  opacity: 1;
+}
+.page-content .detail-list .core-product .product-list .product-item.offline:hover .bg {
+  background-color: #65cecf;
+  opacity: 0.5;
+}
+.page-content .detail-list .core-product .product-list .product-item.offline:hover .content {
+  top: 8%;
+}
+.page-content .detail-list .core-product .product-list .product-item.offline:hover .content .item-icon-panel .item-icon {
+  opacity: 0;
+}
+.page-content .detail-list .core-product .product-list .product-item.offline:hover .content .item-icon-panel .item-icon-hover {
+  opacity: 1;
+}
+.page-content .detail-list .core-product .product-list .product-item.offline:hover .content .item-line-panel {
+  margin-top: 0;
+}
+.page-content .detail-list .core-product .product-list .product-item.offline:hover .content .item-line-panel .icon-line {
+  opacity: 0;
+}
+.page-content .detail-list .core-product .product-list .product-item.offline:hover .content .item-title {
+  margin-top: 0;
+}
+.page-content .detail-list .core-product .product-list .product-item.offline:hover .content .item-desc {
+  margin-top: 10px;
+  opacity: 1;
+}
+.page-content .detail-list .core-product .product-list .product-item.internet-banking:hover .bg {
+  background-color: #65cecf;
+  opacity: 0.5;
+}
+.page-content .detail-list .core-product .product-list .product-item.internet-banking:hover .content {
+  top: 8%;
+}
+.page-content .detail-list .core-product .product-list .product-item.internet-banking:hover .content .item-icon-panel .item-icon {
+  opacity: 0;
+}
+.page-content .detail-list .core-product .product-list .product-item.internet-banking:hover .content .item-icon-panel .item-icon-hover {
+  opacity: 1;
+}
+.page-content .detail-list .core-product .product-list .product-item.internet-banking:hover .content .item-line-panel {
+  margin-top: 0;
+}
+.page-content .detail-list .core-product .product-list .product-item.internet-banking:hover .content .item-line-panel .icon-line {
+  opacity: 0;
+}
+.page-content .detail-list .core-product .product-list .product-item.internet-banking:hover .content .item-title {
+  margin-top: 0;
+}
+.page-content .detail-list .core-product .product-list .product-item.internet-banking:hover .content .item-desc {
+  margin-top: 10px;
+  opacity: 1;
+}
+.page-content .detail-list .mobile-terminal {
+  margin-top: 80px;
+}
+.page-content .detail-list .mobile-terminal .top {
+  position: relative;
+}
+.page-content .detail-list .mobile-terminal .top .bg {
+  width: 100%;
+  z-index: -1;
+}
+.page-content .detail-list .mobile-terminal .top .detail-header {
+  position: absolute;
+  left: 0;
+  top: 32px;
+  width: 100%;
+}
+.page-content .detail-list .mobile-terminal .top .detail-header .primary-title,
+.page-content .detail-list .mobile-terminal .top .detail-header .secondary-title {
+  color: #fff;
+  border-color: #fff;
+}
+.page-content .detail-list .mobile-terminal .top .mobile-links-wrap {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 180px;
+  background-color: rgba(0,0,0,0.6);
+}
+.page-content .detail-list .mobile-terminal .top .mobile-links-wrap .mobile-links {
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 48px;
+  font-size: 0;
+}
+.page-content .detail-list .mobile-terminal .top .mobile-links-wrap .mobile-links .mobile-link {
+  display: inline-block;
+  vertical-align: top;
+  width: 25%;
+}
+.page-content .detail-list .mobile-terminal .top .mobile-links-wrap .mobile-links .mobile-link .name {
+  margin-top: 24px;
+  font-size: 18px;
+  color: #fff;
+}
+.page-content .detail-list .mobile-terminal .bottom {
+  margin-bottom: 40px;
+  padding: 60px 0;
+}
+.page-content .detail-list .mobile-terminal .bottom .extra-descs {
+  width: 80%;
+  margin: 0 auto;
+  font-size: 0;
+}
+.page-content .detail-list .mobile-terminal .bottom .extra-descs .extra-desc {
+  display: inline-block;
+  vertical-align: top;
+  width: 18%;
+  margin-right: 2.500000000000002%;
+}
+.page-content .detail-list .mobile-terminal .bottom .extra-descs .extra-desc:last-child {
+  margin-right: 0;
+}
+.page-content .detail-list .our-customer {
+  padding-bottom: 64px;
+}
+.page-content .detail-list .our-customer .desc {
+  padding-top: 24px;
+}
+.page-content .detail-list .our-customer .links-wrap .customer-links {
+  margin: 48px auto;
+  font-size: 0;
+}
+.page-content .detail-list .our-customer .links-wrap .customer-links .customer-link {
+  display: inline-block;
+  vertical-align: top;
+}
+.page-content .detail-list .our-customer .links-wrap .customer-links .customer-link:last-child {
+  margin-right: 0;
+}
+.footer .top {
+  position: relative;
+}
+.footer .top .company-info {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 0;
+}
+.footer .top .company-info .info-list {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 80%;
+  height: 188px;
+  margin: -94px auto 0 -40%;
+}
+.footer .top .company-info .info-list .info-item {
+  display: inline-block;
+  vertical-align: top;
+  width: 33.3%;
+}
+.footer .top .company-info .info-list .info-item .name {
+  margin-top: 24px;
+  font-size: 18px;
+  color: #fff;
+}
+.footer .bottom {
+  padding-top: 48px;
+  padding-bottom: 24px;
+  color: #fff;
+  background-color: #000;
+}
+.footer .bottom .infos-wrap {
+  display: flex;
+  justify-content: space-between;
+  width: 72%;
+  margin: 0 auto;
+}
+.footer .bottom .infos-wrap .company-desc {
+  margin-right: 48px;
+}
+.footer .bottom .infos-wrap .company-desc .list-unstyled {
+  line-height: 24px;
+  font-size: 14px;
+}
+.footer .bottom .infos-wrap .wechat,
+.footer .bottom .infos-wrap .app {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 24px;
+  font-size: 0;
+}
+.footer .bottom .infos-wrap .wechat .qr,
+.footer .bottom .infos-wrap .app .qr {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 24px;
+}
+.footer .bottom .infos-wrap .wechat .desc,
+.footer .bottom .infos-wrap .app .desc {
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 24px;
+  line-height: 24px;
+  font-size: 14px;
+}
+.footer .bottom .copyright {
+  margin-bottom: 0;
+  padding-top: 24px;
+}
